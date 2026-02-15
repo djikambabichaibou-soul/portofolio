@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Kinetic Architect Theme (Locked) */
+    --bg-color: 5 5 5;
+    /* #050505 */
+    --card-bg: 18 18 18;
+    /* #121212 */
+    --text-primary: 240 240 240;
+    /* #f0f0f0 */
+    --text-secondary: 160 160 160;
+    --accent-color: 204 255 0;
+    /* #ccff00 Electric Lime */
+
+    --font-heading: var(--font-clash);
+    --font-body: var(--font-inter);
+  }
+
+  body {
+    @apply bg-obsidian text-off-white;
+  }
+}
+
+/* Custom Selection Color */
+::selection {
+  background-color: rgb(var(--accent-color));
+  color: rgb(var(--bg-color));
+}
+
+/* Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

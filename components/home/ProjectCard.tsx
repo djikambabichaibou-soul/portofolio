@@ -48,7 +48,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             style={{
                 perspective: 1000,
             }}
-            className="w-full h-[400px] md:h-[500px]"
+            className="w-full h-auto min-h-[400px] md:h-[500px]"
         >
             <motion.div
                 onMouseMove={handleMouseMove}
@@ -58,7 +58,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                     rotateY,
                     transformStyle: "preserve-3d",
                 }}
-                className="group relative w-full h-full bg-carbon rounded-3xl overflow-hidden border border-white/5 cursor-pointer shadow-2xl shadow-black/50"
+                className="group relative w-full h-auto min-h-[400px] md:h-full bg-carbon rounded-3xl overflow-hidden border border-white/5 cursor-pointer shadow-2xl shadow-black/50"
             >
                 {/* Background / Image Placeholder */}
                 <div
@@ -70,10 +70,10 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 </div>
 
                 <div
-                    className="absolute inset-0 flex flex-col justify-between p-8 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
+                    className="relative md:absolute md:inset-0 flex flex-col justify-between p-6 md:p-8 z-10 bg-gradient-to-t from-black/95 via-black/40 to-transparent min-h-[400px] md:min-h-0"
                     style={{ transform: "translateZ(50px)" }}
                 >
-                    <div className="flex justify-between items-start opacity-70 group-hover:opacity-100 transition-opacity">
+                    <div className="flex justify-between items-start opacity-100 md:opacity-70 md:group-hover:opacity-100 transition-opacity mb-12 md:mb-0">
                         <span className="px-3 py-1 rounded-full border border-white/10 text-xs font-mono text-off-white/60">
                             {project.year}
                         </span>
@@ -82,16 +82,16 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                         </Link>
                     </div>
 
-                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <h3 className="font-display text-3xl md:text-5xl font-bold text-off-white mb-2 group-hover:text-electric-lime transition-colors">
+                    <div className="transform translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="font-display text-3xl md:text-5xl font-bold text-off-white mb-2 md:group-hover:text-electric-lime transition-colors">
                             {project.title}
                         </h3>
                         <p className="font-mono text-xs text-electric-lime mb-4 uppercase tracking-widest">
                             {project.tagline[locale]}
                         </p>
 
-                        {/* Strategic Case Study Grid - Visible on Hover */}
-                        <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100 delay-100">
+                        {/* Strategic Case Study Grid - Visible by default on mobile, Hover on Desktop */}
+                        <div className="h-auto md:h-0 md:group-hover:h-auto overflow-hidden transition-all duration-500 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:delay-100">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 border-l-2 border-electric-lime/50 pl-4 mb-6">
                                 <div>
                                     <p className="font-mono text-[10px] text-electric-lime uppercase tracking-widest mb-1">{t.context}</p>

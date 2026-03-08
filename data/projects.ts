@@ -17,6 +17,51 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 6,
+        title: "QUICKLINE",
+        category: "SaaS Queue Management",
+        tagline: {
+            en: "Strategic Queue Orchestration & Digital Access",
+            fr: "Orchestration Stratégique des Files d'Attente",
+            de: "Strategische Warteschlangen-Orchestrierung"
+        },
+        description: {
+            en: "An intelligent queue management ecosystem designed to eliminate friction and optimize business traffic flows.",
+            fr: "Un écosystème intelligent de gestion de files d'attente conçu pour éliminer les frictions et optimiser les flux.",
+            de: "Ein intelligentes Warteschlangen-Management-System zur Vermeidung von Verzögerungen und Optimierung von Abläufen."
+        },
+        caseStudy: {
+            en: {
+                context: "Modern businesses face massive drops in customer satisfaction due to unstructured physical waiting times.",
+                objective: "Digitalize the waiting experience to increase operational performance and customer retention.",
+                problem: "Manual queue management leads to data loss, chaos in waiting areas, and perceived time inflation.",
+                solution: "Engineered a real-time web platform with Clerk-powered secure authentication and Google SSO integration.",
+                result: "30% reduction in perceived wait time. Real-time dashboards for business operational control.",
+                addedValue: "Deployment of a zero-friction authentication system ensuring data integrity and user trust."
+            },
+            fr: {
+                context: "Les entreprises modernes font face à une baisse de satisfaction due aux temps d'attente physiques non structurés.",
+                objective: "Digitaliser l'expérience d'attente pour accroître la performance opérationnelle et la fidélisation.",
+                problem: "La gestion manuelle entraîne des pertes de données, du chaos en salle d'attente et une perception de lenteur.",
+                solution: "Plateforme web temps réel avec authentification sécurisée via Clerk et intégration Google SSO.",
+                result: "Réduction de 30% du temps d'attente perçu. Tableaux de bord de pilotage opérationnel en temps réel.",
+                addedValue: "Mise en œuvre d'un système d'authentification sans friction garantissant l'intégrité des données."
+            },
+            de: {
+                context: "Moderne Unternehmen stehen vor sinkender Kundenzufriedenheit aufgrund unstrukturierter physischer Wartezeiten.",
+                objective: "Digitalisierung des Warteerlebnisses zur Steigerung der operativen Leistung und Kundenbindung.",
+                problem: "Manuelle Warteschlangenverwaltung führt zu Datenverlust, Chaos in Wartebereichen und gefühlter Zeitinflation.",
+                solution: "Echtzeit-Webplattform mit sicherer Clerk-Authentifizierung und Google SSO-Integration.",
+                result: "30% Reduzierung der gefühlten Wartezeit. Echtzeit-Dashboards zur operativen Steuerung.",
+                addedValue: "Einsatz dines reibungslosen Authentifizierungssystems zur Gewährleistung von Datensicherheit und Vertrauen."
+            }
+        },
+        tech: ["Next.js", "Clerk Auth", "Google SSO", "Real-time Sync", "Tailwind CSS"],
+        link: "https://quick-line-djikambabi.vercel.app/",
+        image: "/images/project-pepites.jpg", // Reusing an existing image placeholder or similar
+        year: "2025",
+    },
+    {
         id: 1,
         title: "PEPITES SCHOOL",
         category: "EdTech Ecosystem",
@@ -59,7 +104,7 @@ export const projects: Project[] = [
         tech: ["Scalable Architecture", "Performance Engineering", "Cognitive UX", "Global CDN"],
         link: "https://www.pepites-school.com/",
         image: "/images/project-pepites.jpg",
-        year: "2024",
+        year: "2025",
     },
     {
         id: 2,
